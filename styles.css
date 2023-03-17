@@ -1,0 +1,22 @@
+html, body {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-align: center;
+    color: rgb(256, 256, 256);
+    background-color: rgb(10, 19, 16);
+}
+header {
+    font-size: 50px;
+    margin: 50px auto;
+}
+.word-input {
+    margin: 0px auto;
+}
+.letter { 
+    border-radius: 40%;
+    width: 100px;
+    height: 100px;
+    margin: 0 20px;
+    font-size: 70px;
+    text-align: center;
+    color: rgb(256, 256, 256);
+}
