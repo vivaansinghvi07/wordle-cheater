@@ -10,29 +10,36 @@
     <header>
         Wordle Cheater
     </header>
-    <div class = "heading">
-        Known Letters 
+    <div id = "input">
+        <div class = "heading">
+            Known Letters 
+        </div>
+        <div class = "word-input">
+            <input maxlength = "1" class = "letter">
+            <input maxlength = "1" class = "letter">
+            <input maxlength = "1" class = "letter">
+            <input maxlength = "1" class = "letter">
+            <input maxlength = "1" class = "letter">
+        </div>
+        <div class = "heading">
+            Letters in the Word
+        </div>
+        <div class = "word-input">
+            <input maxlength = "5" class = "letters" id = "known-letters">
+        </div>
+        <div class = "heading">
+            Letters not in the Word
+        </div>
+        <div class = "word-input">
+            <input style = "color: #000000;" class = "letters" id = "bad-letters">
+        </div>
+        <button class = "submit" onclick = "solve(); return false;">
+            Solve
+        </button>
     </div>
-    <div class = "word-input">
-        <input maxlength = "1" class = "letter">
-        <input maxlength = "1" class = "letter">
-        <input maxlength = "1" class = "letter">
-        <input maxlength = "1" class = "letter">
-        <input maxlength = "1" class = "letter">
+    <div id = "output" hidden = "hidden">
+        <div id = "results">
+            <!-- This is where the answers will be printed -->
+        </div>
     </div>
-    <div class = "heading">
-        Letters in the Word
-    </div>
-    <div class = "word-input">
-        <input maxlength = "5" class = "letters" id = "known-letters">
-    </div>
-    <div class = "heading">
-        Letters not in the Word
-    </div>
-    <div class = "word-input">
-        <input style = "color: #000000;" class = "letters" id = "bad-letters">
-    </div>
-    <button class = "submit" onclick = "solve(); return false;">
-        Solve
-    </button>
 </body>

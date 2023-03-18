@@ -41,3 +41,8 @@ header {
 .submit:active {
     background-color: rgb(200, 200, 200);
 }
+#results {
+    text-align: center;
+    margin: 20px auto;
+    font-size: 20px;
+}
