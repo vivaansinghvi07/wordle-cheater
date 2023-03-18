@@ -13,7 +13,9 @@ function solve() {
 
         // gets the possibilities
         let possibilities = getGuesses(answers);
-        console.log(possibilities);
+
+        // prints the possibilities on the page
+        printPossiblities(possibilities);
       
     })
     .catch(error => console.error(error)); 
@@ -86,4 +88,28 @@ function getGuesses(answers) {
 
     // returns array of possible guesses
     return possibilities;
+}
+
+function printPossiblities(possiblities) {
+    // hides the input
+    document.getElementById("input").setAttribute("hidden", "hidden");
+
+    // shows the output
+    document.getElementById("output").removeAttribute("hidden");
+
+    // place for text to go
+    let results = document.getElementById("results");
+
+    // prints message depending on size
+    if (possiblities.length === 0) {
+        results.innerHTML = "No answers found!";
+    } else {
+        results.innerHTML = "Your possible answers: <br><br>";
+    }
+
+    // prints the output
+    possiblities.forEach((word) => {
+        results.innerHTML += word.toUpperCase() + "<br>";
+    });
+
 }
