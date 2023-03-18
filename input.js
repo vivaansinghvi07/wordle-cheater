@@ -6,21 +6,24 @@ $(document).on("change keyup paste", ".letter", function() {
     // goes through each and checks if they're empty
     Array.from(inputs).forEach((element) => {
 
-        // makes letter uppercase
-        element.value = element.value.toUpperCase();
+        // makes letter uppercase and makes alphabetic
+        element.value = element.value.toUpperCase().replace(/[^A-Z]/gi, "");
         
         // initializes color
-        let color;
+        let BGcolor, color;
         
         // checks if empty
         if (!element.value) {       
-            color = "#ffffff";      // colors it white
+            BGcolor = "#ffffff";        // colors background white
+            color = "#000000";          // colors text black
         } else {                    
-            color = "#26a113";      // colors it green
+            BGcolor = "#26a113";        // colors background green
+            color = "#ffffff";          // colors text white
         }
 
         // enters color
-        element.style.backgroundColor = color;
+        element.style.backgroundColor = BGcolor;
+        element.style.color = color;
 
     });
 });
@@ -32,21 +35,24 @@ $(document).on("change keyup paste", ".letters", function() {
     let yellow = document.querySelector("#known-letters");
     let not = document.querySelector("#bad-letters");
     
-    // makes elements uppercase
-    yellow.value = yellow.value.toUpperCase();
-    not.value = not.value.toUpperCase();
+    // makes elements uppercase and removes non alpha characters
+    yellow.value = yellow.value.toUpperCase().replace(/[^A-Z]/gi, "");
+    not.value = not.value.toUpperCase().replace(/[^A-Z]/gi, "");
 
     // initializes color
-    let color;
+    let BGcolor, color;
 
     // checks if its empty
     if (!yellow.value) {
-        color = "#ffffff";          // color white
+        BGcolor = "#ffffff";            // color background white
+        color = "#000000";              // color text black
     } else {
-        color = "#d49f00"
+        BGcolor = "#d49f00";            // color background yellow
+        color = "#ffffff";               // color text white
     }
 
     // sets color
-    yellow.style.backgroundColor = color;
+    yellow.style.backgroundColor = BGcolor;
+    yellow.style.color = color;
 
 });
