@@ -56,3 +56,12 @@ $(document).on("change keyup paste", ".letters", function() {
     yellow.style.color = color;
 
 });
+
+// resets everything
+function reset() {
+
+    // hides and shows input and output
+    document.getElementById("input").removeAttribute("hidden");
+    document.getElementById("output").setAttribute("hidden", "hidden");
+    
+}
